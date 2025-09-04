@@ -14,3 +14,5 @@ void WriteLine(const char* str);
 void WriteAt(const char* str, int x, int y, uint8_t color);
 
 void Clear();
+
+void entry();

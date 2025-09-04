@@ -81,3 +81,10 @@ void Clear() {
     terminal_row = 0;
     terminal_col = 0;
 }
+
+void entry()
+{
+
+    Write("> ");
+
+}

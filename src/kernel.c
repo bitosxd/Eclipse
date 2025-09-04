@@ -5,6 +5,8 @@
 
 #include <stdint.h>
 #include "Modules/Video.h"
+#include "Modules/Keyboard.h"
+#include "Modules/IDT.h"
 
 #define VGA_WIDTH 80
 #define VGA_HEIGHT 25
@@ -13,14 +15,36 @@
 uint16_t* terminal_buffer = (uint16_t*)VGA_MEMORY;
 int terminal_row = 0;
 int terminal_col = 0;
-uint8_t terminal_color = 0x07; // cinza no preto
+uint8_t terminal_color = 0x07;
 
-void kernel_main() {
+extern const char* version = "Build 1";
+
+void startup()
+{
+
     terminal_color = vga_entry_color(0x0F, 0x00); // White on black, like... any command-based kernel LMAO
+    itd_init();
+    pic_remap();
+    keyboard_init();
     Clear();
+
+}
+
+void Update()
+{
+
+    // this is empty for now >///<
+
+}
+
+void kernel_main() 
+{
+
+    startup();
 
     Writeline("Hello, world! :3");
     WriteAt("For testing purposes only, build 1", 10, 5, vga_entry_color(0x0F, 0x00));
     
-    for(;;);
+    while (1) { Update(); }
+
 }
