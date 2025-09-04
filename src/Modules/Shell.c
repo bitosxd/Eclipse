@@ -2,6 +2,7 @@
 #include "Video.h"
 #include <string.h>
 #include "../kernel.h"
+#include "../Utilities/regedit.h"
 
 // This is my favorite part, do VERIFICATIONS, this part is good cause i did a lot of other commands
 // so now this part is made by a high-level language, and not low-level C, cause now exists some easier commands
@@ -27,13 +28,19 @@ void shell_execute(const char *input) {
     else if (input[0] == 0) 
     {
 
-        // the line is empty, so the code doesnt do anything :p
+        // if u dont type anything, the code doesnt do nothing, what are u expecting??
 
     } 
     else if (strcmp(input, "write"))
     {
 
         WriteLine("this command intentionally doesn't exist for now");
+
+    }
+    else if (strcmp(input, "regedit"))
+    {
+
+        regedit_init();
 
     }
     else 

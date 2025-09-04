@@ -23,6 +23,7 @@ ASM_SRCS := $(wildcard $(SRC_DIR)/*.asm) $(wildcard $(MODULES_DIR)/*.asm)
 # Object files
 C_OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(C_SRCS))
 C_OBJS := $(patsubst $(MODULES_DIR)/%.c,$(BUILD_DIR)/Modules/%.o,$(C_OBJS))
+C_OBJS := $(patsubst $(MODULES_DIR)/%.c,$(BUILD_DIR)/Utilities/%.o,$(C_OBJS))
 
 ASM_OBJS := $(patsubst $(SRC_DIR)/%.asm,$(BUILD_DIR)/%.o,$(ASM_SRCS))
 ASM_OBJS := $(patsubst $(MODULES_DIR)/%.asm,$(BUILD_DIR)/Modules/%.o,$(ASM_OBJS))
