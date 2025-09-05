@@ -9,3 +9,11 @@ void regedit_init()
   WriteLine("regedit doesnt exists yet");
 
 }
+
+void regbeta_init()
+{
+
+  WriteLine("Eclipse RegEdit");
+  WriteLine("Pre-beta build 1");
+
+}
