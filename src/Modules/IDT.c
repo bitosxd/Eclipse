@@ -33,7 +33,7 @@ void idt_init()
 
     idt_load(&idtp);
 
-    idt_set_gate(33, (uint32_t)irq1_handler_asm, 0x08, 0x8E); // IRQ1 teclado
+    idt_set_gate(33, (uint32_t)irq1_handler_asm, 0x08, 0x8E); // IRQ1
     idt_load(&idtp);
 
     console_writeline("Loaded IDT.");
