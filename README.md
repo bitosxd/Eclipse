@@ -29,7 +29,7 @@ qemu-system-i386 -kernel build/kernel.bin
 64MB of ram
 1GB of free storage
 
-### 🖥️ Recommend 
+### 🖥️ Recommended
 
 970MHz CPU
 128MB of ram
