@@ -9,6 +9,15 @@ static const char art_vline[] = // just 2 simple things to test this ASCII engin
 "|\n"
 "|";
 
+static const char art_extd_vline[] = // an... extended version of the vertical line, what are you looking for?
+"|\n" //im not an artist, just a programer
+"|\n"
+"|\n"
+"|\n"
+"|\n"
+"|\n"
+"|\n";
+
 typedef struct 
 {
   
@@ -20,8 +29,9 @@ typedef struct
 static const ascm_entry_t ascm_table[] = 
 {
 
-  { "vline",  art_vline },
-  { "hline",  art_hline },
+  { "ASCIIvline1",  art_vline },
+  { "ASCIIhline1",  art_hline },
+  { "ASCIIvline2", art_extd_vline }, // this line is longer than others lol
 
 };
 
@@ -47,7 +57,7 @@ void ASCM_Show(const char *name)
   if (name == 0)
   {
 
-    ASCM_Help();
+    WriteLine("please type some ASCII code");
     return;
 
   }
@@ -71,3 +81,5 @@ void ASCM_Show(const char *name)
   Console_WriteLine(name);
 
 }
+
+// okay, i think ill never understand this code... i just... search how to do this on the internet :p

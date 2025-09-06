@@ -72,7 +72,9 @@ void WriteAt(const char* str, int x, int y, uint8_t color) {
 }
 
 // Clears the screen
-void Clear() {
+void Clear() 
+{
+    
     for (int y = 0; y < VGA_HEIGHT; y++) {
         for (int x = 0; x < VGA_WIDTH; x++) {
             terminal_putentryat(' ', terminal_color, x, y);

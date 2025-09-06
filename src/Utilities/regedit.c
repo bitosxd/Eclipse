@@ -16,6 +16,6 @@ void regbeta_init()
 
   WriteLine("Eclipse RegEdit");
   WriteLine("Pre-beta build 1");
-  ASCM_Show("hline");
+  ASCM_Show("ASCIIhline");
 
 }

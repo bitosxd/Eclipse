@@ -43,6 +43,12 @@ void shell_execute(const char *input) {
         regedit_init();
 
     }
+    else if (strcmp(input, "regbetaedit(1)"))
+    {
+
+        regbeta_init();
+
+    }
     else 
     {
 
