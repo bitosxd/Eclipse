@@ -1,7 +1,6 @@
 # Eclipse Kernel
 
-Eclipse is a simple, educational operating system kernel written from scratch in C and Assembly.  
-Its goal is to provide a minimal, clean, and extensible base for learning how operating systems work — from bootloader to a basic shell-like interface.
+Eclipse is a simple operating system kernel written in C and Assembly.
 
 ## 🔥 Features (WIP)
 
@@ -9,7 +8,7 @@ Its goal is to provide a minimal, clean, and extensible base for learning how op
 - Text-mode terminal output
 - Modular code structure (`Modules/` folder)
 
-## Building
+## 🏢 Building
 
 You need a cross-compiler (`i686-elf-gcc`) and `i686-elf-binutils`.  
 On Debian/Ubuntu, you can build them manually following [OSDev Wiki's tutorial](https://wiki.osdev.org/GCC_Cross-Compiler).
@@ -24,7 +23,19 @@ This will create build/kernel.bin, which you can run in QEMU:
 qemu-system-i386 -kernel build/kernel.bin
 ```
 
-##### ✨ Eclipse is still in early development! Feel free to contribute or suggest improvements. Feedback is always welcome!
+## 💻 System requirements
+
+590MHz CPU or higher
+64MB of ram
+1GB of free storage
+
+### 🖥️ Recommended
+
+970MHz CPU
+128MB of ram
+1.5GB of free storage
+
+#### ✨ Eclipse is still in early development! Feel free to contribute or suggest improvements. Feedback is always welcome!
 ---
 all codes made by:
 [BitosXD](https://github.com/bitosxd)
