@@ -1,5 +1,5 @@
 // were am I? wait... this is the code that defines the "Write" function? AM I IN A KERNEL???????
-// im... beating all the limits, first the kernel mod, and now... MY OWN KERNEL YAY!
+// im... beating all the limits, first the kernel mod, (for NexusOS) and now... MY OWN KERNEL YAY!
 
 // Code by Byt3z :3
 
@@ -26,6 +26,14 @@ void startup()
     itd_init();
     pic_remap();
     keyboard_init();
+    // Updating the permanently registry keys
+    RegistryEntry* k_main = create_key(&root_registry, "KEY_MAIN", "");
+    RegistryEntry* k_kernel = create_key(k_main, "KERNEL", "");
+    WriteLine("Created main keys");
+    create_key(k_kernel, "superbar", "0");
+    create_key(k_kernel, "CanIhaveBetaRegistry", "1");
+    create_key(k_kernel, "TerminalColor", "0x0F, 0x00");
+    WriteLine("Created SubKeys");
     Clear();
 
 }

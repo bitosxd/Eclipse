@@ -57,7 +57,7 @@ void ASCM_Show(const char *name)
   if (name == 0)
   {
 
-    WriteLine("please type some ASCII code");
+    WriteLine("please type some ASCII code"); // you need to type something to print a ASCII draw
     return;
 
   }
