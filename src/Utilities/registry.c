@@ -1,3 +1,5 @@
+// Code by Nixx UwU
+
 #include "Registry.h"
 #include <stdlib.h>
 #include <string.h>

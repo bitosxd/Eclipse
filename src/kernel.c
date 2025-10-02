@@ -1,7 +1,7 @@
 // were am I? wait... this is the code that defines the "Write" function? AM I IN A KERNEL???????
 // im... beating all the limits, first the kernel mod, (for NexusOS) and now... MY OWN KERNEL YAY!
 
-// Code by Byt3z :3
+// Code by Nixx UwU
 
 #include <stdint.h>
 #include "Modules/Video.h"
@@ -19,9 +19,7 @@ uint8_t terminal_color = 0x07;
 
 extern const char* version = "Build 1";
 
-void startup()
-{
-
+void startup() {
     terminal_color = vga_entry_color(0x0F, 0x00); // White on black, like... any command-based kernel LMAO
     itd_init();
     pic_remap();
@@ -35,24 +33,17 @@ void startup()
     create_key(k_kernel, "TerminalColor", "0x0F, 0x00");
     WriteLine("Created SubKeys");
     Clear();
-
 }
 
-void Update()
-{
-
+void Update() {
     // this is empty for now >///<
-
 }
 
-void kernel_main() 
-{
-
+void kernel_main() {
     startup();
 
     Writeline("Hello, world! :3");
     WriteAt("For testing purposes only, build 1", 10, 5, vga_entry_color(0x0F, 0x00));
     
     while (1) { Update(); }
-
 }

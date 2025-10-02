@@ -4,5 +4,6 @@
 #include <stdint.h>
 
 void regedit_init();
+void regbeta_init();
 
 #endif

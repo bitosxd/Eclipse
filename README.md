@@ -1,6 +1,6 @@
 # Eclipse Kernel
 
-Eclipse is a simple operating system kernel written in C and Assembly.
+Eclipse is a simple operating system kernel written in C and (unfortunately) Assembly.
 
 ## 🔥 Features (WIP)
 
@@ -38,4 +38,4 @@ qemu-system-i386 -kernel build/kernel.bin
 #### ✨ Eclipse is still in early development! Feel free to contribute or suggest improvements. Feedback is always welcome!
 ---
 all codes made by:
-[BitosXD](https://github.com/bitosxd)
+[NixxLTE UwU](https://github.com/bitosxd)

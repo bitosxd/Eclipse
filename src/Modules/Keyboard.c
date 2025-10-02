@@ -29,21 +29,21 @@ void keyboard_handler() {
         if (c == '\b' && buffer_index > 0) {
             buffer_index--;
             input_buffer[buffer_index] = 0;
-            console_write("\b ");
-            console_write("\b");
+            Write("\b ");
+            Write("\b");
         } else if (c == '\n') {
             input_buffer[buffer_index] = 0;
-            console_writeline(""); // new line
+            Writeline(""); // new line
             // here the code process the command
             if (buffer_index > 0) {
                 shell_execute(input_buffer);
             }
             buffer_index = 0;
-            console_write("> ");
+            Write("> ");
         } else {
             input_buffer[buffer_index++] = c;
             input_buffer[buffer_index] = 0;
-            console_write_char(c);
+            Write_char(c);
         }
     }
 
